@@ -1,0 +1,45 @@
+<div class="my-container m-0 ">
+
+  <div class="mt-4 my-shadow my-rounded-corner overflow-hidden py-5" id="mobileBaner">
+    <h1 class="text-center p-5 mt-5 d-flex justify-content-start align-items-start text-light ">
+      LAST CHANCE SALE <br>
+      UP TO 40% OFF
+    </h1>
+    <div class="text-center mx-5 px-5 d-flex justify-content-start align-items-start text-light ">
+      <button type="button" class="btn btn-outline-light btn-lg  " (click)="onButtonClickMobiles()">Shop now</button>
+    </div>
+
+  </div>
+  <div class="product-list py-5 " *ngFor="let trendingProduct of trendingProducts">
+    <h1 class="text-center pb-5 "><b>TRENDING</b> </h1>
+    <app-trending-products [category]="trendingProduct.category"></app-trending-products>
+  </div>
+</div>
+
+
+<div class="my-container m-0 ">
+  <div class="mt-4 my-shadow my-rounded-corner overflow-hidden " id="laptopBaner">
+    <h1 class="text-center p-5 mt-5 d-flex justify-content-start align-items-start text-light ">
+      LAPTOPS <br>
+      UP TO 15% OFF
+    </h1>
+    <div class="text-center mx-5 px-5 d-flex justify-content-start align-items-start text-light ">
+      <button type="button" class="btn btn-outline-light btn-lg  " (click)="onButtonClickLaptops()">Shop now</button>
+    </div>
+
+  </div>
+  <div class="product-list py-5 " *ngFor="let newArrival of newArrivals">
+    <h1 class="text-center pb-5 "><b>NEW ARRIVALS</b> </h1>
+    <app-new-arrivals [category]="newArrival.category"></app-new-arrivals>
+  </div>
+</div>
+
+<div class=" my-shadow my-rounded-corner overflow-hidden " id="chairBanner">
+  <h1 class="text-center p-5 mt-5 d-flex justify-content-start align-items-start text-light ">
+    <br>
+    OFFER ENDS SOON
+  </h1>
+  <button type="button" class="btn btn-outline-light btn-lg" (click)="onButtonClickChairs()">SHOP NOW</button>
+</div>
+
+

@@ -1,0 +1,76 @@
+.product-baner button {
+  position: absolute;
+  top: 50%;
+  left: 20%;
+}
+
+.product-baner img {
+  height: 90vh;
+  width: 100%;
+
+}
+
+.product-list {
+  width: 100%;
+}
+
+#mobileBaner {
+  font-size: 40px;
+  background-image: url(../../assets/Images/Baner/Baner_Mobile.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+
+#mobileBaner h1 {
+  margin-left: 10%;
+  font-size: 50px;
+  text-shadow: 5px 5px #00000071;
+}
+
+#mobileBaner .btn {
+  margin-left: 20%;
+
+}
+
+#chairBanner{
+  font-size: 40px;
+  background-image: url(../../assets/Images/Baner/Baner_Chair.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+#chairBanner h1 {
+  margin-left: 10%;
+  font-size: 50px;
+  text-shadow: 5px 5px #00000071;
+}
+
+#chairBanner .btn {
+  margin-left: 20%;
+
+}
+
+#laptopBaner{
+  font-size: 40px;
+  background-image: url(../../assets/Images/Baner/Baner_Laptop.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+#laptopBaner h1 {
+  margin-left: 10%;
+  font-size: 50px;
+  text-shadow: 5px 5px #00000071;
+}
+
+#laptopBaner .btn {
+  margin-left: 20%;
+
+}

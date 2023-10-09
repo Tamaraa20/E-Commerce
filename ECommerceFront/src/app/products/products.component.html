@@ -1,0 +1,49 @@
+<div class="my-container m-auto py-5">
+
+  <div class="  py-5 d-flex container ">
+    <div class="btn-group d-flex justify-content-start btn1 " role="group">
+      <button type="button" class="btn btn-outline-dark" [ngClass]="{'active': view === 'grid'}"
+        (click)="view = 'grid'">Grid</button>
+      <button type="button" class="btn btn-outline-dark" [ngClass]="{'active': view === 'list'}"
+        (click)="view = 'list'">List</button>
+    </div>
+
+    <div class=" flex-grow-1 d-flex align-items-end justify-content-end  ">
+      <span class="mx-3 d-flex fs-5 fw-bold">Sort By</span>
+      <div class="btn-group" role="group">
+        <button type="button" class="btn btn-outline-dark" [ngClass]="{'active': sortby === 'default'}"
+          (click)="sortby = 'default' ;sortByPrice(sortby)">
+          Default
+        </button>
+        <button type="button" class="btn btn-outline-dark" [ngClass]="{'active': sortby === 'htl'}"
+          (click)="sortby = 'htl'; sortByPrice(sortby)">
+          Price (High to Low)
+        </button>
+        <button type="button" class="btn btn-outline-dark" [ngClass]="{'active': sortby === 'lth'}"
+          (click)="sortby = 'lth' ;sortByPrice(sortby)">
+          Price (Low to High)
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <div class="grid-view" *ngIf="view === 'grid'">
+      <div class="row d-flex justify-content-center align-items-center">
+        <div class="col-5 m-auto p-0 w-50" *ngFor="let product of products">
+          <app-product [product]="product"></app-product>
+        </div>
+      </div>
+    </div>
+
+    <div class="list-view" *ngIf="view === 'list'">
+      <div class="row mb-5" *ngFor="let product of products">
+        <div class="col">
+          <app-product [view]="'list'" [product]="product"></app-product>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
